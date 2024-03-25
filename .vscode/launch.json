@@ -1,0 +1,30 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Test MusicGen",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "test_musicgen",
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "8",
+                "TOKENIZERS_PARALLELISM": "false"
+            }
+        },
+        {
+            "name": "Test PySceneDetect",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "test_pyscenedetect"
+        },
+        {
+            "name": "Test BLIP-2",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "test_blip2"
+        },
+    ]
+}
