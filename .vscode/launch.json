@@ -5,12 +5,23 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Herrmann-1.0 wo Annote",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "herrmann-wo-annote",
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "5",
+                "TOKENIZERS_PARALLELISM": "false"
+            }
+        },
+        {
             "name": "Test MusicGen",
             "type": "debugpy",
             "request": "launch",
             "module": "test_musicgen",
+            "justMyCode": false,
             "env": {
-                "CUDA_VISIBLE_DEVICES": "8",
+                "CUDA_VISIBLE_DEVICES": "5",
                 "TOKENIZERS_PARALLELISM": "false"
             }
         },
@@ -24,7 +35,46 @@
             "name": "Test BLIP-2",
             "type": "debugpy",
             "request": "launch",
-            "module": "test_blip2"
+            "module": "test_blip2",
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "5"
+            }
+        },
+        {
+            "name": "Test CLIP",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "test_clip",
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "5"
+            }
+        },
+        {
+            "name": "Test Whisper",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "test_whisper",
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "5"
+            }
+        },
+        {
+            "name": "Test Annote",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "test_pyannote",
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "5"
+            }
+        },
+        {
+            "name": "Test Gemini",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "test_gemini",
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "5"
+            }
         },
     ]
 }

@@ -1,34 +1,3 @@
-# Herrmann-1.0
-This project re-implements the Herrmann-1.0 presented in [ICASSP 2024](https://audiomatic-research.github.io/herrmann-1/).
-
-## Installation
-```bash
-# AudioCraft Preliminaries
-pip install torch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 --index-url https://download.pytorch.org/whl/cu121
-pip install audiocraft
-conda install "ffmpeg<5" -c conda-forge
-# MusicGen & BLIP-2
-pip install git+https://github.com/huggingface/transformers.git
-pip install accelerate
-# Herrmann
-pip install scenedetect[opencv]
-# Whisper
-pip install  git+https://github.com/openai/whisper.git
-# Gemini
-pip install  google-generativeai
-```
-## Gemini API Key
-Please follow the [instruction](https://ai.google.dev/?gad_source=1&gclid=Cj0KCQjwqpSwBhClARIsADlZ_Tn0bUm4aPKdQysdzuc2_SDR04DzhyERWWqNW8qrZWKaU0qx8uiTDCkaAoISEALw_wcB) from Google Gemini to create your own API key, and configure it as the environment variable **GOOGLE_API_KEY**.
-
-## Main Function
-Run the following command to process the 'original.mp4' video file to generate the 'musicgen_out.wav' and 'out.json' file.
-```bash
-export TOKENIZERS_PARALLELISM=false
-python -m herrmann-wo-annote
-```
-### Sample out.json
-The following is a sample of the out.json file, including the video duration, the image captions from BLIP-2, the video transcripts from Whisper, emotions from CLIP, the high-level description prompt (hl_prompt), the low-level music prompt (ll_prompt) for MusicGen.
-```json
 {
     "captions": [
         "the two people are standing on the deck of a boat",
@@ -66,10 +35,3 @@ The following is a sample of the out.json file, including the video duration, th
         " Now hold on to the railing."
     ]
 }
-```
-
-
-
-## Experiments
-You can test on all the sub-modules with test_*.py files to adjust the parameters and validate the gemini token.
-
